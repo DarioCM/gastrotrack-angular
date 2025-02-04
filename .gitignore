@@ -40,3 +40,11 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Ignore node_modules
+node_modules/
+dist/
+*.log
+package-lock.json
+.angular/
+.vscode/
