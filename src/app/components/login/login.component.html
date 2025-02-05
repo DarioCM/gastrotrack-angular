@@ -1,23 +1,38 @@
 <div class="login-container">
-  <mat-card class="login-card">
-    <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
-    </mat-card-header>
+  <mat-card class="login-card" style="text-align: center;">
+    
+      <mat-card-header class="login-title">
+        <!-- <h1 class="login-title">Login</h1> -->
+      </mat-card-header>
+    
     <mat-card-content>
-      <form (ngSubmit)="onSubmit()">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Email</mat-label>
-          <input matInput type="email" [(ngModel)]="email" name="email" required />
-        </mat-form-field>
+      
+      <form (ngSubmit)="onSubmit()"  >
 
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Password</mat-label>
-          <input matInput type="password" [(ngModel)]="password" name="password" required />
-        </mat-form-field>
+       
+        <h1 class="login-title">Gastrotrack</h1>
+        
 
-        <button mat-raised-button color="primary" class="full-width" type="submit">
-          Login
-        </button>
+        <p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" [(ngModel)]="email" name="email" required />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="password" name="password" required />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <button mat-raised-button color="primary" class="full-width" type="submit">
+            Login
+          </button>
+        </p>
+
       </form>
       <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
     </mat-card-content>

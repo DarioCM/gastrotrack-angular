@@ -1,0 +1,21 @@
+<div class="p-4">
+    <h2 class="text-xl font-bold mb-4">Daily Diet Logs</h2>
+    <table class="table-auto w-full border border-gray-300">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border px-4 py-2">Date</th>
+          <th class="border px-4 py-2">Meals</th>
+          <th class="border px-4 py-2">Type of Meal</th>
+          <th class="border px-4 py-2">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let log of logs" class="hover:bg-gray-100">
+          <td class="border px-4 py-2">{{ log.date }}</td>
+          <td class="border px-4 py-2">{{ log.meals }}</td>
+          <td class="border px-4 py-2">{{ log.typeMeal }}</td>
+          <td class="border px-4 py-2">{{ log.notes }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
