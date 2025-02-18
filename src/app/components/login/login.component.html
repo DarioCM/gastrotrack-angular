@@ -33,6 +33,13 @@
           </button>
         </p>
 
+        <!-- Add Register Button -->
+        <p>
+          <button mat-button color="accent" class="full-width" [routerLink]="'/register'">
+            Don't have an account? Register
+          </button>
+        </p>
+
       </form>
       <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
     </mat-card-content>

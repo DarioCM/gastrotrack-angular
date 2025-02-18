@@ -1,0 +1,58 @@
+<mat-card class="register-container">
+    <h2 class="text-center">Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" formControlName="confirmPassword" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" formControlName="age" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="male">Male</mat-option>
+          <mat-option value="female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Height (cm)</mat-label>
+        <input matInput type="number" formControlName="height" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Weight (kg)</mat-label>
+        <input matInput type="number" formControlName="weight" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Time with Gastritis (months)</mat-label>
+        <input matInput type="number" formControlName="gastritisDuration" />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" class="full-width" [disabled]="!registerForm.valid">
+        Register
+      </button>
+  
+    </form>
+  </mat-card>

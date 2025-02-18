@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './guards/auth.guard'; // Import the AuthGuard
+import { RegisterComponent } from './components/register/register.component';
 
 export const routes: Routes = [
   {
@@ -13,4 +14,6 @@ export const routes: Routes = [
   },
   { path: 'login', component: LoginComponent }, // Add the login route
   { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirects root to 'login'
+  { path: 'register', component: RegisterComponent }, // Add the register route
+  
 ];
